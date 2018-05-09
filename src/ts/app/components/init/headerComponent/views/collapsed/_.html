@@ -1,0 +1,57 @@
+<div class="_collapse_action_c">
+    <span class="_collapse_title"></span>
+    <div class="valign-wrapper _collapse_action_btns_c">
+        <i class="material-icons _header_collapse_action_c" title="collapse" data-bind="click:collapse">arrow_drop_down</i>
+        <a href="#" class="_expand_c" title="Expand" data-bind="click:$component.expandChat">
+            <img class="_expand_icon_c" src="${require(`./../../../icons/icon-exapnd.svg`)}">
+        </a>
+
+        <!--<i class="material-icons">close</i>-->
+        <!--<i class="material-icons">arrow_drop_up</i>-->
+    </div>
+</div>
+<nav class="nav-wrapper_c">
+    <div class="nav-wrapper">
+        <a href="#" class="_xorchat_logo_c" data-bind="click : showHomeScreen">
+            <img src="${require(`./../../../icons/xorchat-logo.svg`)}" alt="" data-intro="OpenXorchat Support" data-position="bottom">
+        </a>
+        <a href="#" class=_menu_c>
+            <i class="material-icons  dropdown-button" data-activates='dropdown2_c' style="padding:0px">menu</i>
+        </a>
+    </div>
+
+    <ul id='dropdown2_c' class='dropdown-content'>
+        <li>
+            <a id="pf" class="modal-trigger" href="#_modal4" data-bind="click: function() { $component.showProfile.bind($component, userDetails())();}">Profile</a>
+        </li>
+        <li>
+            <a class="modal-trigger" href="#_modal3">Support</a>
+        </li>
+    </ul>
+</nav>
+
+
+<!-- Modal Structure -->
+<div id="_modal3" class="modal modal-fixed-footer">
+    <div class="modal-content valign-wrapper">
+        <div class="_feedback-text center-align">
+            Any bug reporting, feature request or feedback please drop mail with screenshot to
+            <a style="text-decoration: none;" href="mailto:openxorchat_support@xoriant.com"> openxorchat_support@xoriant.com</a>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="_modal4" class="modal modal-fixed-footer">
+    <div class="modal-content"> -->
+        <!-- ko if: showProfileComponent -->
+        <profile-component params="res:pfDetails()"></profile-component>
+        <!-- /ko -->
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Close</a>
+    </div>
+</div>
