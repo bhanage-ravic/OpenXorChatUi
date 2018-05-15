@@ -40,6 +40,12 @@ module.exports = function (config) {
       dir: 'coverage/'
     },
 
-    browsers: ["Chrome"]
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    }
   });
 };
