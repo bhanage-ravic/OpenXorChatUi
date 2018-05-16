@@ -39,7 +39,7 @@ module.exports = function (config) {
       type: 'html',
       dir: 'coverage/'
     },
-
+    singleRun:true,
     browsers: ['ChromeHeadless', 'ChromeHeadlessNoSandbox'],
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
